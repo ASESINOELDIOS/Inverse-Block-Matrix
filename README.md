@@ -28,6 +28,11 @@ For the numba
 conda install -c numba numba
 ```
 
+Ιn case it doesn't work properly, you might need to update all packages
+```
+conda update --all
+```
+
 ## Usage info
 
 This function calculates the inverse of a block matrix A, in which, every block is simultaneously diagonalizable by the same matrix S.
