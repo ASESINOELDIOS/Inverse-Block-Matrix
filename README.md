@@ -1,4 +1,7 @@
-# Inverse-Block-Matrix
+#  Parallel Block Matrix Inversion Algorithm
+![GPLv2][]
+
+[GPLv2]: https://img.shields.io/badge/license-GPLv2-lightgrey.svg
 
 AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)
 
@@ -8,7 +11,7 @@ Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/mai
 
 REFERENCES:  https://www.python.org/, https://numba.pydata.org/
 
-Inverse of block matrix in parallel implementation in python
+Parallel implementation for the Inverse of a block matrix. 
 
 ## Requirements
 The code is written in Python 3. The packages needed are numba and numpy.
