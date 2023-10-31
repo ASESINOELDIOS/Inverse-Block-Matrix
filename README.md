@@ -28,4 +28,13 @@ For the numba
 conda install -c numba numba
 ```
 
+## Usage info
+
+This function calculates the inverse of a block matrix A, in which, every block is simultaneously diagonalizable by the same matrix S.
+
+The function "inv_unit_diagon_blocks" has as imput, the block matrix A and the dimentions of each block m.
+
+As an output value it gives the inverse of the block matrix A using parallel execution in multiple threads.
+
+The algorithm uses automated parallelization with the help of numba package.
 # Contribute
