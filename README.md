@@ -4,9 +4,7 @@ AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)
 
 2023: initial version
 
-![GPLv2][]
-
-[GPLv2]: https://img.shields.io/badge/license-GPLv2-lightgrey.svg
+Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/main/LICENSE)
 
 REFERENCES:  https://www.python.org/, https://numba.pydata.org/
 
