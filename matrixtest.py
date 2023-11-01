@@ -1,4 +1,5 @@
 import numpy as np
+from numpy.linalg import inv
 def matrixtest(n,m):
     typenum=np.complex64
     S=np.empty((n,n),dtype=typenum)
