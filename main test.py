@@ -16,4 +16,4 @@ def testfunc(n,m,k):
     return inv_A 
 
 if __name__ == '__main__':
-    testfunc()
+    testfunc(n,m,k)
