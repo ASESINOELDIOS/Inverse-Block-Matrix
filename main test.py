@@ -1,6 +1,5 @@
 from matrixtest import *
 from inverse_algorithm import *
-import timeit
 from numba import set_num_threads
 #################
 #m,n are for the dimentions of A matrix
