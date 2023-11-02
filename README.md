@@ -7,7 +7,8 @@ AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)<br>
 Initial version: Nov. 2023<br>
 Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/main/LICENSE)<br>
 REFERENCES:  https://www.python.org/, https://numba.pydata.org/<br>
-Description: Parallel implementation for the Inverse of a block matrix. 
+Description: Parallel implementation for the Inverse of a block matrix.>br> 
+The code is developped to support the paper, ``Parallel Inversion of Matrices with Simultaneously Diagonalizable Blocks, by D. Lazaridis, K.A.Draziotis and N.L. Tsitsas.``
 
 ## Requirements
 The code is written in Python 3. The packages needed are numba and numpy (for install provide ``$pip install numba`` for a linux based OS).<br>
