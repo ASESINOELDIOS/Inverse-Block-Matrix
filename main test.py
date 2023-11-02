@@ -22,7 +22,7 @@ def testfunc(n,m,k):
     print("\nThe matrix S is\n")
     print(np.array_str(S, precision=2, suppress_small=True))
     print("\nThe inverse of matrix A is\n")
-    print(np.array_str(S, precision=2, suppress_small=True))
+    print(np.array_str(inv_A, precision=2, suppress_small=True))
     print("\nThe inverse of matrix A, using a standard method (here LU), is\n")
     print(np.array_str(inv(A), precision=2, suppress_small=True))
 
