@@ -1,6 +1,6 @@
 from numpy import diag,empty,ascontiguousarray,complex64
 from numpy.linalg import inv,eig
-from numba import njit, prange,threading_layer,config
+from numba import njit, prange,config
 config.THREADING_LAYER = 'omp'
 @njit(parallel=True)
 def inv_unit_diagon_blocks(A,m):
@@ -15,6 +15,8 @@ def inv_unit_diagon_blocks(A,m):
     S=S.astype(typenum)
     inv_S=inv(S)
     inv_S=inv_S.astype(typenum)
+    # make a copy of S for further calculations
+    S_copy = S.copy()
 #computation of L blocks
     Lambda=empty((M,n),dtype=typenum)
     k=0
@@ -46,5 +48,5 @@ def inv_unit_diagon_blocks(A,m):
             k=m*i
         for j in range(m):
             inv_A[(i)*n:(i+1)*n,(j)*n:(j+1)*n]=ascontiguousarray(S)@inv_Lambda[j+k]@ascontiguousarray(inv_S)
-    return inv_A
+    return inv_A, S_copy
 
