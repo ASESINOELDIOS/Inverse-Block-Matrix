@@ -7,8 +7,7 @@ AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)<br>
 Initial version: Nov. 2023<br>
 Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/main/LICENSE)<br>
 REFERENCES:  https://www.python.org/, https://numba.pydata.org/<br>
-Description: Parallel implementation for the Inverse of a block matrix.<br> 
-The algorithm is analyzed in the following paper <br> ``Parallel Inversion of Matrices with Simultaneously Diagonalizable Blocks, by D. Lazaridis, K.A.Draziotis and N.L. Tsitsas.``<br>
+Description: The algorithm is analyzed in the following paper <br> ``Parallel Inversion of Matrices with Simultaneously Diagonalizable Blocks, by D. Lazaridis, K.A.Draziotis and N.L. Tsitsas.``<br>
 The accompanying code has been designed to facilitate experimental investigations into the algorithm proposed in this paper.
 
 ## Requirements
