@@ -18,13 +18,13 @@ def testfunc(n,m,k):
     #print(inv_unit_diagon_blocks(A,m))
     inv_A,S=inv_unit_diagon_blocks(A,m)
     print("The matrix A is\n")
-    print(A)
+    print(np.array_str(A, precision=2, suppress_small=True))
     print("\nThe matrix S is\n")
-    print(S)
+    print(np.array_str(S, precision=2, suppress_small=True))
     print("\nThe inverse of matrix A is\n")
-    print(inv_A)
-    print("\nThe inverse of matrix A with LU is\n")
-    print(inv(A))
+    print(np.array_str(S, precision=2, suppress_small=True))
+    print("\nThe inverse of matrix A, using a standard method (here LU), is\n")
+    print(np.array_str(inv(A), precision=2, suppress_small=True))
 
 if __name__ == '__main__':
     testfunc(n,m,k)
