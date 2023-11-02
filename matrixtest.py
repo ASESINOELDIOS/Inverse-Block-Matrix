@@ -1,30 +1,14 @@
-from matrixtest import matrixtest
-from main_algorithm import inv_unit_diagon_blocks
-from numba import set_num_threads
+import numpy as np
 from numpy.linalg import inv
-#################
-#m,n are for the dimentions of A matrix
-# k is for the number of CPU threads to use
-# if k=1 it executes the algorithm serially
-n=5
-m=5
-k=1
-def testfunc(n,m,k):
-    #creation of A matrix 
-    A=matrixtest(n,m)
-    #setting the number of threads 
-    set_num_threads(k)
-    #run the program to calculate the inverse algorithm 
-    #print(inv_unit_diagon_blocks(A,m))
-    inv_A,S=inv_unit_diagon_blocks(A,m)
-    print("The matrix A is\n")
-    print(A)
-    print("\nThe matrix S is\n")
-    print(S)
-    print("\nThe inverse of matrix A is\n")
-    print(inv_A)
-    print("\nThe inverse of matrix A with LU is\n")
-    print(inv(A))
-
-if __name__ == '__main__':
-    testfunc(n,m,k)
+def matrixtest(n,m):
+    typenum=np.complex64
+    S=np.empty((n,n),dtype=typenum)
+    S=np.random.random((n,n))+ 1.j *np.random.random((n,n))
+    A=np.empty((m*m,n,n),dtype=typenum)
+    inv_s=inv(S)
+    inv_s=inv_s.astype(typenum)
+    for i in range (m*m):
+        x=np.random.random(n)
+        A[i]=S@np.diag(x)@inv_s
+    A=np.concatenate(A.reshape(m,m,n,n).swapaxes(1, 2).reshape(-1, n*m, n*m))
+    return A
