@@ -3,19 +3,15 @@
 
 [GPLv2]: https://img.shields.io/badge/license-GPLv2-lightgrey.svg
 
-AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)
-
-2023: initial version
-
-Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/main/LICENSE)
-
-REFERENCES:  https://www.python.org/, https://numba.pydata.org/
-
-Parallel implementation for the Inverse of a block matrix. 
+AUTHOR: D. Lazaridis (lazdimspy@csd.auth.gr)<br>
+Initial version: Nov. 2023<br>
+Licence : [GPLv2](https://github.com/ASESINOELDIOS/Inverse-Block-Matrix/blob/main/LICENSE)<br>
+REFERENCES:  https://www.python.org/, https://numba.pydata.org/<br>
+Description: Parallel implementation for the Inverse of a block matrix. 
 
 ## Requirements
-The code is written in Python 3. The packages needed are numba and numpy.
-For most optimal settings is recommended to use the anaconda distribution for the prerequisites packages.
+The code is written in Python 3. The packages needed are numba and numpy (for install provide ``$pip install numba`` for a linux based OS).<br>
+For more optimal settings is recommended to use the anaconda distribution for the prerequisites packages.
 ### Installation of packages needed
 
 For the numpy
@@ -35,11 +31,10 @@ conda update --all
 
 ## Usage info
 
-This function calculates the inverse of a block matrix A, in which, every block is simultaneously diagonalizable by the same matrix S.
-
-The function "inv_unit_diagon_blocks" has as imput, the block matrix A and the dimentions of each block m.
-
-As an output value it gives the inverse of the block matrix A using parallel execution in multiple threads.
+This function calculates the inverse of a $m\times m$ block matrix $A$, where each block is $n\times n$ matrix.<br>
+We assume that each block is simultaneously diagonalizable by the same matrix $S.$<br>
+The function ``inv_unit_diagon_blocks`` has as input, the block matrix $A$ and the dimensions of each block m.<br>
+The output of the function provides the inverse of the block matrix $A$ using parallel execution in multiple threads.
 
 The algorithm uses automated parallelization with the help of numba package.
 
